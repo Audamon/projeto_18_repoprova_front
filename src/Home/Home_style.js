@@ -3,7 +3,14 @@ import styled from 'styled-components';
 const HomePage = styled.div`
   display: flex;
   flex-direction: column;
-
+  align-items: center;
+  a {
+    font-family: 'Roboto', sans-serif;
+    margin-top: 10px;
+    text-decoration: none;
+    color: #3a707b;
+    font-size: 24px;
+  }
 `;
 const Form = styled.form`
   display: flex;
@@ -17,24 +24,24 @@ const Form = styled.form`
   height: 70vh;
 `;
 const Input = styled.input`
- font-family: 'Roboto', sans-serif;
+  font-family: 'Roboto', sans-serif;
   width: 40vw;
   height: 50px;
   border: none;
   padding: 0 0 0 20px;
-  ::placeholder{
+  ::placeholder {
     font-family: 'Roboto', sans-serif;
     font-size: 24px;
   }
-  `;
+`;
 const Button = styled.button`
- font-family: 'Roboto', sans-serif;
- font-size:24px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 24px;
   width: 40vw;
   height: 50px;
   border: none;
   color: #ffffff;
-  background-color: #3A707B;
+  background-color: #3a707b;
 `;
 export {
   HomePage, Form, Input, Button,

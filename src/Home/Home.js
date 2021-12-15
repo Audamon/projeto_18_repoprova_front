@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import TopBar from '../TopBar/TopBar';
 import {
   HomePage, Form, Input, Button,
@@ -14,6 +15,7 @@ export default function Home() {
               <Input placeholder='Confirmar Senha'></Input>
               <Button>Entrar</Button>
           </Form>
+          <Link to='/signup'>Primeira vez? Faça o cadastro</Link>
       </HomePage>
   );
 }

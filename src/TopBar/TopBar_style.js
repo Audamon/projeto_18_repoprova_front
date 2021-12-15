@@ -10,7 +10,7 @@ const TopBarHeader = styled.header`
     justify-content: center;
     align-items: center;
     padding: 0 20px 0 20px;
-    margin-bottom: 70px;
+    margin-bottom: 50px;
 `;
 const Title = styled.h1`
   background-color: #3A707B;
