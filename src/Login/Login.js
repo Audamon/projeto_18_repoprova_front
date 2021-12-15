@@ -1,21 +1,19 @@
 import { Link } from 'react-router-dom';
 import TopBar from '../TopBar/TopBar';
 import {
-  HomePage, Form, Input, Button,
-} from './Home_style';
+  LoginPage, Form, Input, Button,
+} from './Login_style';
 
-export default function Home() {
+export default function Login() {
   return (
-      <HomePage>
+      <LoginPage>
           <TopBar />
           <Form>
-              <Input placeholder='Nome'></Input>
               <Input placeholder='Email'></Input>
               <Input placeholder='Senha'></Input>
-              <Input placeholder='Confirmar Senha'></Input>
               <Button>Entrar</Button>
           </Form>
-          <Link to='/signup'>Primeira vez? Faça o cadastro</Link>
-      </HomePage>
+          <Link to='/signup'>Primeira vez? Faça o cadastro!</Link>
+      </LoginPage>
   );
 }

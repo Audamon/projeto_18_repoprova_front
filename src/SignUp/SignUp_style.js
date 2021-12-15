@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-const HomePage = styled.div`
+const SignUpPage = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -29,6 +29,7 @@ const Input = styled.input`
   height: 50px;
   border: none;
   padding: 0 0 0 20px;
+  border-radius: 6px ;
   ::placeholder {
     font-family: 'Roboto', sans-serif;
     font-size: 24px;
@@ -42,7 +43,8 @@ const Button = styled.button`
   border: none;
   color: #ffffff;
   background-color: #3a707b;
+  border-radius: 6px ;
 `;
 export {
-  HomePage, Form, Input, Button,
+  SignUpPage, Form, Input, Button,
 };
