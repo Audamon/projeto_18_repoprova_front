@@ -30,6 +30,7 @@ const Input = styled.input`
   border: none;
   padding: 0 0 0 20px;
   border-radius: 6px ;
+  font-size: 24px;
   ::placeholder {
     font-family: 'Roboto', sans-serif;
     font-size: 24px;

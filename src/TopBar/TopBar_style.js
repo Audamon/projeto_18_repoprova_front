@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-// import { HiLogin } from 'react-icons/hi';
 
 const TopBarHeader = styled.header`
     font-family: 'Righteous', cursive;
@@ -17,10 +16,5 @@ const Title = styled.h1`
   font-size: 34px;
   color: #ffffff;
 `;
-// const LogIn = styled(HiLogin)`
-//   background-color: #3A707B;
-//   color: #ffffff;
-//   font-size: 30px;
-// `;
 
 export { TopBarHeader, Title };
