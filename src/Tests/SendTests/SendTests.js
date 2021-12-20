@@ -9,7 +9,7 @@ import {
 } from './SendTests_style';
 import TopBar from '../../TopBar/TopBar';
 import {
-  getProfessors, getSubjects, sendDataTest,
+  getProfessors, getSubjects, sendDataTest, logout,
 } from '../../Services/Api';
 
 export default function SendTests() {
@@ -52,10 +52,14 @@ export default function SendTests() {
     sendDataTest(body);
     nav('/home');
   }
+  function logOutButton() {
+    logout();
+    nav('/');
+  }
   return (
     <HomePage>
       <TopBar />
-      <LogOut />
+      <LogOut onClick={logOutButton} />
       <h1>Insira os dados</h1>
       <ButtonsContainer onSubmit={sendTest}>
         <Input

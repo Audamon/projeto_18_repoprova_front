@@ -76,6 +76,16 @@ function sendDataTest(body) {
   });
 }
 
+function logout() {
+  const config = {
+    headers: {
+      Authorization: `Bearer ${getStoredUser()}`,
+    },
+  };
+  axios.delete('http:localhost:5000/logout', config);
+  localStorage.clear();
+}
+
 export {
-  signUp, logIn, getProfessors, getSubjects, sendDataTest,
+  signUp, logIn, getProfessors, getSubjects, sendDataTest, logout,
 };
