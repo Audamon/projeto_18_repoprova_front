@@ -1,5 +1,7 @@
 import axios from 'axios';
-// https://repo-prova-back.herokuapp.com/
+// const apiUrl = https://repo-prova-back.herokuapp.com/
+
+const apiUrl = 'http://localhost:5000/';
 
 function storeUser(token) {
   const serialUser = JSON.stringify(token);
@@ -12,11 +14,13 @@ function getStoredUser() {
 }
 
 function signUp(body) {
-  axios.post('http://localhost:5000/signup', body);
+  const route = 'signUp';
+  axios.post(apiUrl + route, body);
 }
 
 function logIn(body) {
-  const promise = axios.post('http://localhost:5000/login', body);
+  const route = 'login';
+  const promise = axios.post(apiUrl + route, body);
   promise.catch((err) => {
     if (err.response.status === 401) {
       alert('Dados inválidos!');
@@ -33,7 +37,8 @@ function getProfessors() {
       Authorization: `Bearer ${getStoredUser()}`,
     },
   };
-  const promise = axios.get('http://localhost:5000/test/professor', config);
+  const route = 'test/professor';
+  const promise = axios.get(apiUrl + route, config);
   promise.catch((err) => {
     if (err.response.status === 401) {
       alert('Ação não permertida');
@@ -47,8 +52,9 @@ function getSubjects(professorName) {
       Authorization: `Bearer ${getStoredUser()}`,
     },
   };
+  const route = `test/subject/${professorName}`;
   const promise = axios.get(
-    `http://localhost:5000/test/subject/${professorName}`,
+    apiUrl + route,
     config,
   );
   promise.catch((err) => {
@@ -65,7 +71,8 @@ function sendDataTest(body) {
       Authorization: `Bearer ${getStoredUser()}`,
     },
   };
-  const promise = axios.post('http://localhost:5000/test', body, config);
+  const route = 'test';
+  const promise = axios.post(apiUrl + route, body, config);
   promise.catch((err) => {
     if (err.response.status === 401) {
       alert('Ação não permertida');
@@ -82,7 +89,8 @@ function logout() {
       Authorization: `Bearer ${getStoredUser()}`,
     },
   };
-  axios.delete('http:localhost:5000/logout', config);
+  const route = 'logout';
+  axios.delete(apiUrl + route, config);
   localStorage.clear();
 }
 
